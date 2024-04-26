@@ -1,7 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
+using TreeEditor;
 using Unity.VisualScripting;
 using UnityEngine;
+using static GameManager;
 
 public class Dongle : MonoBehaviour
 {
@@ -10,6 +12,7 @@ public class Dongle : MonoBehaviour
     public int level;
     public bool isDrag;
     public bool isMerge;
+    public bool isAttach;
 
     public Rigidbody2D rigid;
     CircleCollider2D circle;
@@ -29,6 +32,27 @@ public class Dongle : MonoBehaviour
     void OnEnable()
     {
         anim.SetInteger("Level", level);
+    }
+
+    //automatically called when disabled
+    void OnDisable()
+    {
+        // reset dongle attributes
+        level = 0;
+        isDrag = false;
+        isMerge = false;
+        isAttach = false;
+
+        // reset dongle transform
+        transform.localPosition = Vector3.zero;
+        transform.localRotation = Quaternion.identity;
+        transform.localScale = Vector3.zero;
+
+        // reset dongle physics
+        rigid.simulated = false;
+        rigid.velocity = Vector2.zero;
+        rigid.angularVelocity = 0;
+        circle.enabled = true;
     }
 
     void Update()
@@ -64,6 +88,25 @@ public class Dongle : MonoBehaviour
     {
         isDrag = false;
         rigid.simulated = true;
+    }
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        StartCoroutine("AttachRoutine");
+    }
+
+    IEnumerator AttachRoutine()
+    {
+        if (isAttach)
+        {
+            yield break;
+        }
+
+        isAttach = true;
+        manager.SfxPlay(GameManager.Sfx.Attach);
+
+        yield return new WaitForSeconds(0.2f);
+
+        isAttach = false;
     }
 
     void OnCollisionStay2D(Collision2D collision)
@@ -148,6 +191,7 @@ public class Dongle : MonoBehaviour
 
         anim.SetInteger("Level", level + 1);
         EffectPlay();
+        manager.SfxPlay(GameManager.Sfx.LevelUp);
 
         yield return new WaitForSeconds(0.3f);
         level++;
