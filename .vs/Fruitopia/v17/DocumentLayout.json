@@ -1,0 +1,54 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Unity Project\\Fruitopia\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{89DF2170-90E7-8D12-A0C1-2A6381D84C5E}|Assembly-CSharp.csproj|c:\\unity project\\fruitopia\\assets\\scripts\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{89DF2170-90E7-8D12-A0C1-2A6381D84C5E}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{89DF2170-90E7-8D12-A0C1-2A6381D84C5E}|Assembly-CSharp.csproj|c:\\unity project\\fruitopia\\assets\\scripts\\dongle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{89DF2170-90E7-8D12-A0C1-2A6381D84C5E}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\dongle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Dongle.cs",
+              "DocumentMoniker": "C:\\Unity Project\\Fruitopia\\Assets\\Scripts\\Dongle.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Dongle.cs",
+              "ToolTip": "C:\\Unity Project\\Fruitopia\\Assets\\Scripts\\Dongle.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Dongle.cs",
+              "ViewState": "AQIAAEgAAAAAAAAAAAAmwGcAAAAZAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-26T03:08:56.248Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "GameManager.cs",
+              "DocumentMoniker": "C:\\Unity Project\\Fruitopia\\Assets\\Scripts\\GameManager.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\GameManager.cs",
+              "ToolTip": "C:\\Unity Project\\Fruitopia\\Assets\\Scripts\\GameManager.cs",
+              "RelativeToolTip": "Assets\\Scripts\\GameManager.cs",
+              "ViewState": "AQIAABkAAAAAAAAAAAAowCoAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-26T03:02:19.933Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
